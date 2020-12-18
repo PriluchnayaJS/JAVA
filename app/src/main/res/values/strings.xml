@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Draw Shapes</string>
+    <string name="draw">DrawValue</string>
+    <string name="drawBtn">Draw</string>
+    <string name="moveBtn">Move</string>
+    <string name="rectBtn">Rect</string>
+    <string name="circleBtn">Circle</string>
+    <string name="triangleBtn">Triangle</string>
+    <string name="undoBtn">UNDO</string>
+    <string-array name="colors">
+        <item>000000</item>
+        <item>ff0000</item>
+        <item>00ff00</item>
+        <item>0000ff</item>
+        <item>ffff00</item>
+        <item>00ffff</item>
+        <item>ff00ff</item>
+    </string-array>
+</resources>
