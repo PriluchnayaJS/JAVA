@@ -23,8 +23,8 @@ public class MyView extends View {
     int sizeGrid = 30;
     float density;
 
-  //  String typeShape = TYPE_RECT;
-    String typeShape = TYPE_CIRCLE;  //текущая фигура рисования
+      String typeShape = TYPE_RECT;
+  //  String typeShape = TYPE_CIRCLE;  //текущая фигура рисования
     String color = "000000";
 
     int counterPoints;
@@ -43,6 +43,7 @@ public class MyView extends View {
 
     int counterShapes;
     Shape[] shapes = new Shape[100];
+
 
     public MyView(Context context, @Nullable AttributeSet attrs) {
         super(context, attrs);
@@ -63,6 +64,12 @@ public class MyView extends View {
 
     public void setTypeShape(String typeShape) {
         this.typeShape = typeShape;
+        this.invalidate();
+    }
+
+    //метод выбора цвета в спиннере
+    public void setColor(String color) {
+        this.color = color;
         this.invalidate();
     }
 
