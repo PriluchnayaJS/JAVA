@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         //спиннер
         AdapterView spinnerColors = findViewById(R.id.spinnerColors);
 
-        class Listener implements View.OnClickListener, RadioGroup.OnCheckedChangeListener, AdapterView.OnItemClickListener  {
+        class Listener implements View.OnClickListener, RadioGroup.OnCheckedChangeListener  {
 
             @Override
             public void onClick(View v) {
@@ -44,16 +44,16 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             }
 
 
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                String[] color = getResources().getStringArray(R.array.colors);
-                //работа с элементами массива
-                for (int i = 0; i < color.length ; i++) {
-                    //преобразовать в код цвета
-                   // color[i] = String.valueOf(Integer.parseInt(color[i], 16));
-
-                }
-            }
+//            @Override
+//            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+//                String[] color = getResources().getStringArray(R.array.colors);
+//                //работа с элементами массива
+//                for (int i = 0; i < color.length ; i++) {
+//                    //преобразовать в код цвета
+//                   // color[i] = String.valueOf(Integer.parseInt(color[i], 16));
+//
+//                }
+//            }
 
 //            public void OnItemSelected(AdapterView parent) {
 //
@@ -82,7 +82,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         spinnerColors.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-
+                String[] color = getResources().getStringArray(R.array.colors);
+                myView.setColor(color[position]);
             }
 
             @Override
